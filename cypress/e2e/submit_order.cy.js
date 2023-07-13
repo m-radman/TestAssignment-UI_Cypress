@@ -8,7 +8,7 @@ import CheckoutPage from "../page_objects/CheckoutPage"
 
 describe('template spec', () => {
   beforeEach(() => {
-    cy.visit("https://www.saucedemo.com/", {timeout: 30000})
+    cy.visit("https://www.saucedemo.com/")
   })
 
   it('login', () => {
@@ -16,17 +16,22 @@ describe('template spec', () => {
     IndexPage.enterPassword("secret_sauce")
     IndexPage.clickLoginBtn()
 
-    InventoryPage.addItemToCart(InventoryPage.elements.backpackAddToCart())
-    InventoryPage.goToProductPage(Products.elements.jacketLink())
-    SingleProductPage.addItemToCart()
+    InventoryPage.addItemToCart(InventoryPage.elements.jacketAddToCart())
+    NavBar.elements.shoppingCartBadge().should("have.text", "1")
 
+    InventoryPage.goToProductPage(Products.elements.backpackLink())
+    SingleProductPage.addItemToCart()
     NavBar.elements.shoppingCartBadge().should("have.text", "2")
 
     NavBar.goToCart()
     Products.elements.jacketLink().should("exist")
+    Products.elements.backpackLink().should("exist")
+
     
     CartPage.removeItemFromCart(CartPage.elements.removeJacket())
+    NavBar.elements.shoppingCartBadge().should("have.text", "1")
     Products.elements.jacketLink().should("not.exist")
+    Products.elements.backpackLink().should("exist")
 
     CartPage.goToCheckout()
     CheckoutPage.enterFirstName()
