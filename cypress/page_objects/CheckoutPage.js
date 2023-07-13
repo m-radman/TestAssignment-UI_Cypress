@@ -1,4 +1,3 @@
-import { faker } from '@faker-js/faker';
 
 class CheckoutPage {
   elements = {
@@ -10,16 +9,16 @@ class CheckoutPage {
     checkoutCompleteMsg: () => cy.contains("Thank you for your order!")
   }
 
-  enterFirstName() {
-    this.elements.firstNameField().type(faker.person.firstName())
+  enterFirstName(firstName) {
+    this.elements.firstNameField().type(firstName)
   }
 
-  enterLastName() {
-    this.elements.lastNameField().type(faker.person.lastName())
+  enterLastName(lastName) {
+    this.elements.lastNameField().type(lastName)
   }
 
-  enterZipCode() {
-    this.elements.zipCodeField().type(faker.location.zipCode())
+  enterZipCode(zip) {
+    this.elements.zipCodeField().type(zip)
   }
 
   clickContinue() {
