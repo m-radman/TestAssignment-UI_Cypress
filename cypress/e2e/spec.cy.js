@@ -4,6 +4,7 @@ import SingleProductPage from "../page_objects/SingleProductPage"
 import NavBar from "../page_objects/common/NavBar"
 import Products from "../page_objects/common/Products"
 import CartPage from "../page_objects/CartPage"
+import CheckoutPage from "../page_objects/CheckoutPage"
 
 describe('template spec', () => {
   beforeEach(() => {
@@ -28,5 +29,11 @@ describe('template spec', () => {
     Products.elements.jacketLink().should("not.exist")
 
     CartPage.goToCheckout()
+    CheckoutPage.enterFirstName()
+    CheckoutPage.enterLastName()
+    CheckoutPage.enterZipCode()
+    CheckoutPage.clickContinue()
+    CheckoutPage.clickFinish()
+    CheckoutPage.elements.checkoutCompleteMsg().should("be.visible")
   })
 })
