@@ -19,7 +19,13 @@ Steps to follow are:
 - Verify that the order is completed successfully with the displayed message
 
 Here is presented the solution for the task using Cypress automation framework.
-You can see my solution using WebDriverIO here [link].
+You can see my solution using WebDriverIO [here](https://github.com/m-radman/TestAssignment-UI_WDIO).
+
+---
+
+### Where to find code
+The implementation of the page objects you can see [here](https://github.com/m-radman/TestAssignment-UI_Cypress/tree/master/cypress/page_objects)
+The implementation of the tests you can see [here](https://github.com/m-radman/TestAssignment-UI_Cypress/blob/master/cypress/e2e/submit_order.cy.js)
 
 ---
 
