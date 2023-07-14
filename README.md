@@ -35,5 +35,5 @@ For running tests you need to take next steps:
 1. Clone this repository to your local machine.
 2. Install dependencies using `npm install`
 3. Run tests using these commands:
-   - To run tests headless use `npm run cypress:run`
-   - To open Cypress and run tests from the browser use `npm run cypress:open`
+   - To run tests headless `npm run cypress:run`
+   - To open Cypress and run tests from the browser `npm run cypress:open`
