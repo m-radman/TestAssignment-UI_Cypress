@@ -23,8 +23,8 @@ You can see my solution using WebDriverIO [here](https://github.com/m-radman/Tes
 ---
 
 ### Where to find code
-The implementation of the page objects you can see [here](https://github.com/m-radman/TestAssignment-UI_Cypress/tree/master/cypress/page_objects)  
-The implementation of the tests you can see [here](https://github.com/m-radman/TestAssignment-UI_Cypress/blob/master/cypress/e2e/submit_order.cy.js)
+The implementation of the page objects you can see [here](https://github.com/m-radman/TestAssignment-UI_Cypress/tree/master/cypress/page_objects).  
+The implementation of the tests you can see [here](https://github.com/m-radman/TestAssignment-UI_Cypress/blob/master/cypress/e2e/submit_order.cy.js).
 
 ---
 
